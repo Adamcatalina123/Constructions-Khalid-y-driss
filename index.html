@@ -66,6 +66,7 @@
         .nav-links.active {
             display: flex;
             flex-direction: column;
+        }
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -107,9 +108,8 @@
 
         /* Hero Section */
         .hero {
+            height: 100vh;
             padding-top: 30%;
-            min-height: 100vh;
-            height: auto;
             position: relative;
             display: flex;
             align-items: center;
@@ -763,13 +763,14 @@
             .values {
                 grid-template-columns: 1fr;
             }
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
+
             .nav-links {
                 display: none;
             }
-
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+            }
             .mobile-menu-btn {
                 display: block;
             }
@@ -1160,6 +1161,7 @@
         menuBtn.addEventListener("click", () => {
         navLinks.classList.toggle("active");
         });
+        
     </script>
 </body>
 </html>

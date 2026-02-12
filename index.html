@@ -63,7 +63,9 @@
         .logo span {
             color: var(--primary);
         }
-
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -761,7 +763,9 @@
             .values {
                 grid-template-columns: 1fr;
             }
-
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
             .nav-links {
                 display: none;
             }
@@ -1149,6 +1153,12 @@
             } else {
                 header.style.background = 'rgba(26, 26, 26, 0.95)';
             }
+        });
+        const menuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
         });
     </script>
 </body>
